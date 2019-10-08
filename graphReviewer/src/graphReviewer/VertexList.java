@@ -1,14 +1,14 @@
 package graphReviewer;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class VertexList {
-	List<Node> vertexList = new ArrayList<Node>();
-	public void addVertex(Node node) {
-		vertexList.add(node);
+	private static Map<Integer, Node> vertexList = new HashMap<Integer, Node>();
+	public static void addVertex(Node node) {
+		vertexList.put(node.getId(), node);
 	}
-	public Node getNodeAtIndex(Integer index) {
-		return vertexList.get(index);
+	public static Node getNodeOfId(Integer nodeId) {
+		return vertexList.get(nodeId);
 	}
 }

@@ -1,7 +1,7 @@
 package graphReviewer;
 
 public class Edge {
-	private Integer pairNodeIndex;
+	private Integer pairNodeId;
 	private Integer weight;
 	private Edge nextReviewer;
 //	public Edge(Integer index, Integer weight) {
@@ -9,8 +9,8 @@ public class Edge {
 //		pairNodeIndex = index;
 //		this.weight = weight;
 //	}
-	public Integer getPairNodeIndex() {
-		return pairNodeIndex;
+	public Integer getPairNodeId() {
+		return pairNodeId;
 	}
 	public Integer getWeight() {
 		return weight;
@@ -26,8 +26,8 @@ public class Edge {
 		this.weight = weight;
 		return this;
 	}
-	public Edge setPairNodeIndex(Integer pairNodeIndex) {
-		this.pairNodeIndex = pairNodeIndex;
+	public Edge setPairNodeId(Integer pairNodeId) {
+		this.pairNodeId = pairNodeId;
 		return this;
 	}
 	

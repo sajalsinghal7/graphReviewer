@@ -2,7 +2,7 @@ package graphReviewer;
 
 public class Node {
 	private Integer id;
-	private String fileName;
+	private String name;
 	private NodeType nodeType;
 //	public Node(Integer id, String name, NodeType type) {
 //		// TODO Auto-generated constructor stub
@@ -10,11 +10,11 @@ public class Node {
 //		fileName = name;
 //		nodeType = type;
 //	}
-	public String getFileName() {
-		return fileName;
+	public String getName() {
+		return name;
 	}
-	public Node setFileName(String fileName) {
-		this.fileName = fileName;
+	public Node setName(String fileName) {
+		this.name = fileName;
 		return this;
 	}
 	public NodeType getNodeType() {
@@ -30,5 +30,21 @@ public class Node {
 	public Node setId(Integer id) {
 		this.id = id;
 		return this;
+	}
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return this.id;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		Node another = (Node) obj;
+		return (this.id == another.getId());
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return (this.id + "\t" + this.name + "\t" + this.nodeType);
 	}
 }
