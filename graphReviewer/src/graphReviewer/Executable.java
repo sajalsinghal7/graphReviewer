@@ -7,6 +7,12 @@ public class Executable {
 	public static void main(String[] args) {
 		/*
 		 * The following data represent Vertex Table
+		 * 
+		 * Vertex
+		 * -----
+		 * Id
+		 * Name
+		 * Type
 		 * */
 		List<Node> vertexData = new ArrayList<Node>();
 		vertexData.add(new Node().setId(1).setName("RB.vue").setNodeType(NodeType.FILE));
@@ -24,6 +30,12 @@ public class Executable {
 		
 		/*
 		 * The following data represent Edge Table
+		 * 
+		 * Edge
+		 * ----
+		 * StartVertexId
+		 * EndVertexId
+		 * Weight
 		 * */
 		AdjacencyList.addEdge(1, 5);
 		AdjacencyList.addEdge(1, 6);
@@ -32,7 +44,7 @@ public class Executable {
 		AdjacencyList.addEdge(3, 7);
 		
 		
-		List<Node> suggestedReviewerList = AdjacencyList.getReviewersForFile(1);
+		List<Node> suggestedReviewerList = AdjacencyList.getReviewersForFile(2);
 		for(Node reviewer : suggestedReviewerList) {
 			System.out.println(reviewer.toString());
 		}
